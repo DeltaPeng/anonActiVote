@@ -25,7 +25,7 @@ class Room extends React.Component {
 		 console.log("made it to Roomjs load ini votes ------------")
 		const {roomName, userName} = this.props;	
 
-		fetch('http://localhost:3000/roomLoadVote',
+		fetch('https://murmuring-taiga-33770.herokuapp.com/roomLoadVote',
 		  { method:'post',
 			 headers: {'Content-Type': 'application/json'},
 			 body: JSON.stringify({
@@ -60,7 +60,7 @@ class Room extends React.Component {
 		  var text = "bbba"//"Play game 1\nWatch movie 23\nWatch movie 1\ncustom activity 4\ngo to eat 1"
 		  var text1="apples" 
 		 
-		fetch('http://localhost:3000/roomItems',
+		fetch('https://murmuring-taiga-33770.herokuapp.com/roomItems',
 		  { method:'post',
 			 headers: {'Content-Type': 'application/json'},
 			 body: JSON.stringify({ 
@@ -119,7 +119,7 @@ class Room extends React.Component {
 		
 		//TO DO: this should prob be loading the latest data, on the offchance the room data changes while in the room, not using what's passed in
 		//TO DO: add a dynamic load of the custom entered items
-		  fetch('http://localhost:3000/room',
+		  fetch('https://murmuring-taiga-33770.herokuapp.com/room',
 		  { method:'post',
 			 headers: {'Content-Type': 'application/json'},
 			 body: JSON.stringify({
@@ -188,7 +188,7 @@ class Room extends React.Component {
 		 console.log("Room submit vote1 and2 and check vote indices: ",theVote1," and v2 is: ", theVote2);
 		 
 		 
-		 fetch('http://localhost:3000/roomVote',
+		 fetch('https://murmuring-taiga-33770.herokuapp.com/roomVote',
 			  { method:'post',
 				 headers: {'Content-Type': 'application/json'},
 				 body: JSON.stringify({

@@ -36,7 +36,7 @@ class Setup extends React.Component {
 	 console.log("c'mon!!11");
 		console.log("check state of union ",this.state);
 		
-		  fetch('http://localhost:3000/setup',
+		  fetch('https://murmuring-taiga-33770.herokuapp.com/setup',
 		  { method:'post',
 			 headers: {'Content-Type': 'application/json'},
 			 body: JSON.stringify({
