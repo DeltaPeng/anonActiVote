@@ -13,10 +13,10 @@ class Signin extends React.Component {
 	 
 	 //create some events to update state based on change value of fields
 	 onUserNameChange = (event) => {
-		 this.setState({ signInUserName: event.target.value})
+		 this.setState({ signInUserName: event.target.value.toLowerCase()})
 	 }
 	 onRoomNameChange = (event) => {
-		 this.setState({ signInRoomName: event.target.value})
+		 this.setState({ signInRoomName: event.target.value.toLowerCase()})
 	 }
 	 
 	 //create an event to send data on submit
@@ -86,13 +86,13 @@ class Signin extends React.Component {
 				  <legend className="f1 fw6 ph0 mh0">Anonymous Activity Voter - Log in</legend>
 				  <div className="mt3">
 					<label className="db fw6 lh-copy f6" htmlFor="userName">Rand user name</label>
-					<input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+					<input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 ttl" 
 							type="text" name="userName"  id="userName" 
 							onChange={this.onUserNameChange} />
 				  </div>
 				  <div className="mv3">
 					<label className="db fw6 lh-copy f6" htmlFor="password">Room to Join</label>
-					<input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+					<input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 ttl" 
 							type="text" name="roomName"  id="roomName" 
 							defaultValue={iniRoom}
 							onChange={this.onRoomNameChange} />

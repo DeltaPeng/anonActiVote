@@ -18,7 +18,7 @@ class Setup extends React.Component {
 		 this.setState({ setupUserName: event.target.value})
 	 }
 	 onRoomNameChange = (event) => {
-		 this.setState({ setupRoomName: event.target.value})
+		 this.setState({ setupRoomName: event.target.value.toLowerCase()})
 	 }
 	 onNumActivsChange = (event) => {
 		 this.setState({ setupNumActivs: event.target.value})
@@ -103,7 +103,7 @@ class Setup extends React.Component {
 							
 							<div className="mv3">
 								<label className="db fw6 lh-copy f6" >RoomName to Create:</label>
-								<input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+								<input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 ttl" 
 										type="text" name="roomName"  id="roomName" 
 										onChange={this.onRoomNameChange} />
 							  </div> 

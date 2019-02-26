@@ -225,7 +225,8 @@ class Room extends React.Component {
 		 console.log("Room refresh c'mon!!11");
 		  
 		 this.printListOfVoted();
-		 this.createSelectItems(false);  
+		 //comment for now, this is adding to list when it shouldn't be. 
+		 //this.createSelectItems(false);  
 	 } 	 
 	   
 	 render() {

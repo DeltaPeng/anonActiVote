@@ -10,6 +10,7 @@ import Particles from 'react-particles-js';
  
 /*
 Anonymous Activity Voter  
+19/02/25 Timothy Ngai - fix, force lower case on user/room names; prevent issue with list size re-adding same entries
 19/02/24 Timothy Ngai - got votes to save properly
 19/02/23 Timothy Ngai - got the randomized lists to add dynamically to a dropdown, got randomized list to display with vote count (a bit sluggish to update at times though)
 19/02/21 Timothy Ngai - create backend API /server for anonymous activ voter
@@ -131,7 +132,7 @@ class App extends Component {
 					?  <Signin loadUser={this.loadUser} 
 						setRoomState={this.setRoomState} setUserState={this.setUserState} onRouteChange={this.onRouteChange} 
 						setGameData={this.setGameData} setMovieData={this.setMovieData} setMiscData={this.setMiscData}
-						iniRoomName={this.state.roomName} /> 
+						iniRoomName={this.state.roomName} iniUserName={this.state.userName} /> 
 					:  <Setup loadUser={this.loadUser} setRoomState={this.setRoomState} setActivData={this.setActivData}  onRouteChange={this.onRouteChange} appState= {this.state.roomName} />
 			)
 		}
